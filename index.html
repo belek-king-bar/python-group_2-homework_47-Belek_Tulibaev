@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+</head>
+<body>
+
+    <div id="string-1">Ядра в вёдра, выдру в тундру!</div>
+    <div id="string-2">Выдрав с выдры в тундре гетры</div>
+    <div id="string-3">В недрах тундры, выдры в гетрах </div>
+    <div id="string-4">Вытру гетрой выдре морду </div>
+    <div id="string-5">Тырят в вёдра ядра кедров!</div>
+    <div id="string-6">Вытру выдрой ядра кедров</div><br><br>
+
+
+    <div class="element">Element 1</div>
+    <div class="element">Element 2</div>
+    <div class="element">Element 3</div>
+    <div class="element">Element 4</div>
+    <div class="element">Element 5</div>
+    <div class="element">Element 6</div><br><br>
+
+
+    <div id="container"></div><br><br>
+
+    
+    <input id="add-item-btn" type="button" value="+">
+
+
+    <script type="application/javascript">
+            console.log(document.getElementById("string-3").innerText);
+            console.log(document.getElementById("string-5").innerText);
+            console.log(document.getElementById("string-2").innerText);
+            console.log(document.getElementById("string-6").innerText);
+            console.log(document.getElementById("string-4").innerText);
+            console.log(document.getElementById("string-1").innerText);
+
+            document.getElementsByClassName('element')[0].style.color = 'red';
+            document.getElementsByClassName('element')[1].style.color = 'red';
+            document.getElementsByClassName('element')[2].style.color = 'red';
+            document.getElementsByClassName('element')[3].style.color = 'green';
+            document.getElementsByClassName('element')[4].style.color = 'green';
+            document.getElementsByClassName('element')[5].style.color = 'green';
+
+            for (var i = 1; i < 6; i++) {    
+                var element = document.createElement("div");
+                element.classList.add("element");       
+                var textelement = document.createTextNode("Element " + [i]);      
+                element.appendChild(textelement);                            
+                document.getElementById("container").appendChild(element);
+            }
+
+            let button = document.getElementById('add-item-btn');
+            button.onclick = function() { 
+
+                var element = document.createElement("div");
+                element.classList.add("element");       
+                var textelement = document.createTextNode("Element");      
+                element.appendChild(textelement);                            
+                document.getElementById("container").appendChild(element);
+
+            };
+
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</body>
+</html>
