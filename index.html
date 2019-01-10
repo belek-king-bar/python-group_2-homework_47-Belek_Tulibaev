@@ -24,8 +24,14 @@
 
     <div id="container"></div><br><br>
 
+
+    <div id="container1"></div><br><br>
+
     
-    <input id="add-item-btn" type="button" value="+">
+    <input id="add-item-btn" type="button" value="+"><br><br>
+
+
+    <div id="container2"></div><br><br>
 
 
     <script type="application/javascript">
@@ -58,9 +64,19 @@
                 element.classList.add("element");       
                 var textelement = document.createTextNode("Element");      
                 element.appendChild(textelement);                            
-                document.getElementById("container").appendChild(element);
+                document.getElementById("container1").appendChild(element);
 
             };
+
+
+            let cont = document.getElementById('container2');
+            function f() {
+                let doc = document.createElement('div');
+                doc.classList.add('element');
+                doc.innerText = Math.floor(Math.random() * 20);
+                cont.appendChild(doc);
+                }
+            window.setInterval(f,5000)
 
 
     </script>
